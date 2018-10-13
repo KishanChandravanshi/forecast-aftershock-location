@@ -21,8 +21,7 @@ testingSet = defaultdict(list)
 
 # columns present in the CSV file are
 # notation in the column names stresses_full_xx -> partial diferentiation of some function 'f' with 'x' and again with 'x'
-columns = ['stresses_full_xx', 'stresses_full_yy', 'stresses_full_xz', 'stresses_full_yz', 'stresses_full_zz']
-
+columns = ['stresses_full_xx', 'stresses_full_yy', 'stresses_full_xy', 'stresses_full_xz','stresses_full_yz','stresses_full_zz']
 def makeDataDict(filenames):
     """
     Returns a dictionary having data combined of all the CSV files
