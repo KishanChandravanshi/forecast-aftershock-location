@@ -25,9 +25,31 @@ We'll be feeding these data to the neural network having several hidden layers (
 The above model according to me can be of great help to the society, as sometimes it is not the earthquake that do a lot damage but the incoming aftershocks. so if we can get an insight about the stress pattern that it left to the area, we can farely warn people about the chances of having an aftershock at that particular location.
 
 ## References
-<i>link to the paper</> https://www.nature.com/articles/s41586-018-0438-y
+<i>link to the paper</i> https://www.nature.com/articles/s41586-018-0438-y
 <br>
-<i>link to the csv files </i> https://drive.google.com/drive/folders/1c5Rb_6EsuP2XedDjg37bFDyf8AadtGDa?usp=sharing
+<i>link to the csv files</i> https://drive.google.com/drive/folders/1c5Rb_6EsuP2XedDjg37bFDyf8AadtGDa?usp=sharing
 <br>
-<i>link to relevant materials </i> http://www.bosai.go.jp/study/application/dc3d/DC3Dhtml_E.html
+<i>link to relevant materials</i> http://www.bosai.go.jp/study/application/dc3d/DC3Dhtml_E.html
 
+## Steps
+
+follow the instruction given below to get started with the model<br>
+```
+git clone https://github.com/KishanChandravanshi/forecast-aftershock-location.git
+cd forecast-aftershock-location
+```
+
+<br>
+
+open your command prompt in this folder, and install all the dependencies provided in the <b> requirement.txt </b> file.
+
+`pip install -r requirements.txt`
+<br>
+* Download the required csv files from the link provided and place them in <b> csvfiles </b> folder.
+* Download the required .h5 files from the link and place them inside the <b> Data </b> directory.
+* Now run <b> buldData.py </b> from the terminal or CMD.<br>
+  <i> buildData.py will create a training_tmp.h5 and testing_tmp.h5 files, these will be the file that you can use for training the models. We're first creating the .h5 file instead of using the data directly for training to reduce the time and memory consumption by the data, because the data is quite big, it will take a substantiate amount of memory, while training, but by creating a .h5 files we are reducing the loading and reading process time by a large fraction.</i>
+* After executing has finished, run <b>trainModel.py</b> file from cmd or terminal. Note you can either use the weights downloaded from the internet to train your model or you can use your created <b> training_tmp.h5 </b> for this purpose, just place them in the Data directory and you are good to go.
+
+* To evaluate your model on the test set, execute <b>evaluate.py </b>, it will give you roc_auc_score
+* <b> helper_function.py </b> as the name implies contain all the function that are being required in the other files.
