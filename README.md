@@ -53,3 +53,4 @@ open your command prompt in this folder, and install all the dependencies provid
 
 * To evaluate your model on the test set, execute <b>evaluate.py </b>, it will give you roc_auc_score
 * <b> helper_function.py </b> as the name implies contain all the function that are being required in the other files.
+* If you want to predict aftershock location on one CSV file, you can use <b> singleCsvPrediction.py </b>.
